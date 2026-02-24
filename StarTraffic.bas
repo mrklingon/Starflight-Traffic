@@ -12,11 +12,10 @@
 150 REM TRANSIT LOOP
 155 rem  pick a ship
 160 ship = int(1+int(9*rnd(1)+.5))
-161 rem print ship: print sloc(ship)
 162 FRM = 0: ARV = 0 : DEST= 0 :rem clear ship states
 163 if sloc(ship)<1 then print Fleet$(ship) + " arrived!!":goto 600
 170 FRM = sloc(ship)
-175 p = 1+(2*rnd(1)+.5) : rem pick destination
+175 p = 1+int(2*rnd(1)+.5) : rem pick destination
 180 DEST  = EXT(ship,p)
 200 rem display departure
 205 print "Departing from "+planet$(sloc(ship)) + " Vessel: " +fleet$(ship)
@@ -36,7 +35,7 @@
 985 PRINT  
 1000 RETURN
 2000 j = 0 : rem delay loop
-2010 for i = 1 to 8000
+2010 for i = 1 to 1000
 2020 j = j + i
 2025 next i
 2030 return
