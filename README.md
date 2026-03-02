@@ -15,4 +15,22 @@ Following that I wanted to try something different.
 
 I'm a big fan of the Star Wars ride at Disney, "Star Tours," both for the fun flight simulator effect AND the whole spaceport ambiance of the ride queue, including (see above) the Arrival and Departure displays (ala flight info in an airport). I thought it would be fun to create a running display of spaceship arrivals and departures in a Star Wars mode.
 
-S
+So beginning with my Starflight BASIC code, I reused the data structures defining ships, stars, planets and hyperspace exits. I used fantasynamegenerators.com to create "Star Wars"-esque ships, stars and planets, and now refer to the exits as "hyperspace lanes" (as is the current SW parlance :). 
+
+The program then generates the set of exits from each star, and in a new array, assigns each ship to one of the 10 star systems.
+
+Next, in a continuous loop, a ship is chosen, and (if not currently in motion) it is assigned a new destination from one of the exits available. The location array for that ship now has the number of the destination star - to indicate it is _moving_ there the number is recorded as negative (i.e. if going to star #3, "-3") is logged.
+
+When being  set in motion TO a star the program prints
+
+```
+Departing from [star name] vessel [ship name] 
+heading for [destination]
+``` 
+
+
+if the ships locaiton is a negative number, then the program prints:
+```
+[Ship name] arrived!!
+[Ship name] arriving at [destination]
+```
