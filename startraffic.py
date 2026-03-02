@@ -12,8 +12,8 @@ STAR = ["Deey", "Uguaks", "Eceub", "Vret", "Sleak",
         "Krithuc", "Olutsos", "Huqein", "Pluedurs", "Isliursil"]
 
 # Initialize ship locations and hyperspace lanes
-sloc = [0] * 10  # ship locations (1-indexed, so index 0 unused)
-ext = [[0] * 3 for _ in range(10)]  # hyperspace lane connections
+sloc = [0] * 11  # ship locations (1-indexed, so index 0 unused)
+ext = [[0] * 3 for _ in range(11)]  # hyperspace lane connections
 
 def initialize():
     """Set up initial ship locations and hyperspace lane connections"""
@@ -69,7 +69,6 @@ while True:
     else:
         # Ship is departing
         frm = sloc[ship]
-            
         # Pick a destination from hyperspace lanes
         p = random.randint(0, 2)
         dest = ext[sloc[ship]][p]
