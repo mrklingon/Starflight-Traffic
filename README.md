@@ -2,7 +2,8 @@
 <img width="861" height="646" alt="image" src="https://github.com/user-attachments/assets/cd70385d-2e01-4bfa-9f54-1d07286f8965" />
 <img width="861" height="646" alt="image" src="https://github.com/user-attachments/assets/055bff04-0413-45e6-aae7-3b6d04034b54" />
 
-*Running display of Starship traffic across ten star systems*
+***Having fun running display of Starship traffic across ten star systems*
+**
 
 [How to use.](#how-to-use)
 
@@ -41,8 +42,41 @@ Then changes the location value to a positive number to indicate it has arrived,
 Output looks like:
 
 ```
-put output here
+Do you need instructions? (y/n)
+
+? y
+This system will display current starship traffic
+across a span of ten interconnected systems.
+
+Ships travel from system to system via hyperspace lanes
+and you will see arrivals and departures.
+
+
+Departing from Uverrooith Vessel: Hellhound
+heading for Krithuc.
+Departing from Codachaa Vessel: BS Khan
+heading for Pluedurs.
+Hellhound arrived!!
+Hellhound arriving at Krithuc
+Departing from Guvor Vessel: Omen
+heading for Krithuc.
+Departing from Yorar Vessel: Hellhound
+heading for Olutsos.
+Departing from Vuthadoh Vessel: SC Providence
+heading for Pluedurs.
+Hellhound arrived!!
+Hellhound arriving at Olutsos
+SC Providence arrived!!
+SC Providence arriving at Pluedurs
+Departing from Uusnes Vessel: BS Nuria
+heading for Sleak.
+Departing from Lesti Vessel: Saber
+heading for Sleak.
+Saber arrived!!
+Saber arriving at Sleak
 ```
+
+
 <a name="how-to-use">  </a>
 ## How to Use:
 There are three sets of code here: a PyBasic version, a CircuitPython app for FruitJam and a CircuitPython version for the NeoTrinkey.
