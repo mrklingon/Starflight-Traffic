@@ -32,7 +32,7 @@ heading for [destination]
 ``` 
 *note: each star has a "planet" associated with it. So departures originate from the planet **to** a star*
 
-if the ships locaiton is a negative number, then the program prints:
+if the ships location is a negative number, then the program prints:
 ```
 [Ship name] arrived!!
 [Ship name] arriving at [destination star]
