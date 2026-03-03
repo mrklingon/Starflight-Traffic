@@ -4,6 +4,8 @@
 
 *Running display of Starship traffic across ten star systems*
 
+[How to use.](#how-to-use)
+
 My first PyBasic-->CircuitPython project, [Project Starflight](https://github.com/mrklingon/Project-Starflight) involved defining a set of ten star systems linked with three "tramline" exits to other starsystems. The goal of the project was two-fold
 
 1. See if I *could* write in BASIC after decades, using PyBasic and
@@ -24,13 +26,54 @@ Next, in a continuous loop, a ship is chosen, and (if not currently in motion) i
 When being  set in motion TO a star the program prints
 
 ```
-Departing from [star name] vessel [ship name] 
+Departing from [planet name] vessel [ship name] 
 heading for [destination]
 ``` 
-
+*note: each star has a "planet" associated with it. So departures originate from the planet **to** a star*
 
 if the ships locaiton is a negative number, then the program prints:
 ```
 [Ship name] arrived!!
-[Ship name] arriving at [destination]
+[Ship name] arriving at [destination star]
 ```
+Then changes the location value to a positive number to indicate it has arrived, so the next time the ship is chosen by the main loop, it will start from their.
+
+Output looks like:
+
+```
+put output here
+```
+<a name="how-to-use">  </a>
+## How to Use:
+There are three sets of code here: a PyBasic version, a CircuitPython app for FruitJam and a CircuitPython version for the NeoTrinkey.
+
+### PyBasic
+
+* StarTraffic.bas - copy this to the examples/ directory under apps/PyBasic/ on a FruitJam. Then load and run. [_note:_ you can run this under any PyBasic install]
+
+
+### FruitJam App
+
+Copy these files into a directory on your FruitJam "apps/StarTraffic"
+
+* code.py
+* metadata.json
+* startraffic.bmp  (icon)
+* startraffic.py
+
+Then you can navigate on the FruitJam to the icon, click and let the program start.
+
+### NeoTrinkey
+
+Copy these files to your NeoTrinkey:
+
+* neoStarTraffic.py (rename as code.py)
+* ncount.py support file for neostartraffic.py [provides blinky lights]
+* prt.py support file for neostartraffic.py [allows redirect of output as if typed]
+
+Change the variable REPL to **True** or **False** depending on whether you are running the program in a REPL like Mu or Thonny. If not the output 
+will be directed via HID as if typed. If REPL=**False** the program will wait, blinking red and green till you touch one of the touch pads. This 
+gives you a chance to move the cursor on the computer to where you want the output to show up (eg. in an editor window). 
+
+Touching the touch pads when the program is running will terminate it.
+ 
