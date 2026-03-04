@@ -37,7 +37,7 @@ if the ships location is a negative number, then the program prints:
 [Ship name] arrived!!
 [Ship name] arriving at [destination star]
 ```
-Then changes the location value to a positive number to indicate it has arrived, so the next time the ship is chosen by the main loop, it will start from their.
+Then changes the location value to a positive number to indicate it has arrived, so the next time the ship is chosen by the main loop, it will start from there.
 
 Output looks like:
 
